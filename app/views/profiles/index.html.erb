@@ -2,9 +2,9 @@
 
 <div id="home-btns">
   
-  <div><%= link_to 'CMO', '#', :class => 'btn btn-large btn-block' %></div></br>
-  <div><%= link_to 'Social Strategist', '#', :class => 'btn btn-large btn-block' %></div></br>
-  <div><%= link_to 'Creative Agency', '#', :class => 'btn btn-large btn-block' %></div>
+  <% @profiles.each do |p| %>
+  <div><%= link_to p.name, profile_path(p.id), :class => 'btn btn-large btn-block' %></div></br>
+  <% end %>
 
 
 

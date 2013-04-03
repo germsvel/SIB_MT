@@ -44,12 +44,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">SIB MT</a>
+          <a class="brand" href="<%= profiles_path %>">SIB MT</a>
           <div class="container nav-collapse">
             <ul class="nav">
-              <li><%= link_to "CMO", "/path1"  %></li>
-              <li><%= link_to "Social Strategist", "/path2"  %></li>
-              <li><%= link_to "Creative Agency", "/path3"  %></li>
+              <li><%= link_to "CMO", profile_path(1)  %></li>
+              <li><%= link_to "Social Strategist", profile_path(2)  %></li>
+              <li><%= link_to "Creative Agency", profile_path(3)  %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
