@@ -36,27 +36,8 @@
   </head>
   <body>
 
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">SIB MT</a>
-          <div class="container nav-collapse">
-            <ul class="nav">
-              <li><%= link_to "CMO", "/path1"  %></li>
-              <li><%= link_to "Social Strategist", "/path2"  %></li>
-              <li><%= link_to "Creative Agency", "/path3"  %></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
 
-    <div class="container">
+    <div id="home-main-container" class="container">
           
             <%= bootstrap_flash %>
             <%= yield %>
