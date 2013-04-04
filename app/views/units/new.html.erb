@@ -1,0 +1,65 @@
+<h2>Hello, please create a new unit below</h2>
+
+<%= form_for @unit do |f| %>
+<table class="new-unit-form">
+
+  <tr>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </tr>
+  <tr>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </tr>
+  <tr>
+    <%= f.label :unit_type %>
+    <%= f.text_field :unit_type %>
+  </tr>
+
+  <tr>
+    <td>
+    <%= f.label 'Buyer Persona' %>
+    </td>
+  </tr>  
+  <tr class="well">
+    <td>
+      CMO: </br>
+      Social Strategist: </br>
+      Creative Agency:
+    </td>
+    <td>
+    <%= f.check_box :cmo %> </br>
+    <%= f.check_box :social_strategist %> </br>
+    <%= f.check_box :creative_agency %>
+    </td>
+  </tr>
+
+  <tr>
+    <td>  
+    <%= f.label 'DITE' %>
+    </td>
+  </tr>
+
+  <tr class="well">
+    <td>
+      Discovery: </br> 
+      Interaction: </br>
+      Transaction: </br>
+      Endorsement: 
+    </td>
+
+    <td>
+    <%= f.check_box :dite_discovery %> </br>
+    <%= f.check_box :dite_interaction %> </br>
+    <%= f.check_box :dite_transaction %> </br>
+    <%= f.check_box :dite_endorsement %>    
+    </td>
+  </tr>
+
+</table>    
+</br>
+<div class='submit-btn'>
+    <%= f.submit :class => 'btn'%>
+</div>
+<% end %>
+  
