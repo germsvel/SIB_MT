@@ -9,16 +9,16 @@
   </tr>
   <% @units.each do |unit| %>
   <tr>
-    <td><%= unit.name %></td>
+    <td><%= link_to unit.name, unit_path(unit.id) %></td>
     <td><%= unit.description %></td>
     <td><%= unit.unit_type %></td>
-    <td>CMO? <%= unit.cmo %></td>
-    <td>Creative Agency? <%= unit.creative_agency %></td>
-    <td>Social Strategist? <%= unit.social_strategist %></td>
-    <td>Discovery: <%= unit.dite_discovery %></td>
-    <td>Interaction: <%= unit.dite_interaction %></td>
-    <td>Transaction: <%= unit.dite_transaction %></td>
-    <td>Endorsement: <%= unit.dite_endorsement %></td>
+    <td>CMO?</br> <%= unit.cmo %></td>
+    <td>Creative Agency?</br> <%= unit.creative_agency %></td>
+    <td>Social Strategist?</br> <%= unit.social_strategist %></td>
+    <td>Discovery:</br> <%= unit.dite_discovery %></td>
+    <td>Interaction:</br> <%= unit.dite_interaction %></td>
+    <td>Transaction:</br> <%= unit.dite_transaction %></td>
+    <td>Endorsement:</br> <%= unit.dite_endorsement %></td>
   </tr>
   <% end %>
 </table>

@@ -1,0 +1,29 @@
+<table class="table table-hover">
+  <tr>
+    <th>Name</th><br/>
+    <td><%= @unit.name %></td>
+  </tr>
+  <tr>
+    <th>Type</th><br/>
+    <td><%= @unit.unit_type %></td>
+  </tr>
+  <tr>
+    <th>Buyer Personas</th><br/>
+    <td>
+        <%= "CMO" if @unit.cmo == true%> |
+        <%= "Social Strategist" if @unit.social_strategist == true %> |
+        <%= "Creative Agency" if @unit.creative_agency == true %>
+    </td>
+  </tr>
+  <tr>
+    <th>DITE</th>
+    <td>
+      <%= "D" if @unit.dite_discovery == true %>
+      <%= "I" if @unit.dite_interaction == true %>
+      <%= "T" if @unit.dite_transaction == true %>
+      <%= "E" if @unit.dite_endorsement == true %>
+    </td>
+  </tr>
+</table>
+
+<%= link_to 'Back', :back %>

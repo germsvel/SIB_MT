@@ -4,4 +4,6 @@ SIBMt::Application.routes.draw do
 
   resources :profiles, :only => [:index, :show]
 
+  resources :units, :only => [:index, :show]
+
 end
