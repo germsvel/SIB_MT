@@ -22,15 +22,15 @@ ActiveRecord::Schema.define(:version => 20130402232039) do
 
   create_table "units", :force => true do |t|
     t.string   "name"
-    t.string   "type"
+    t.string   "unit_type"
     t.text     "description"
     t.boolean  "cmo"
     t.boolean  "creative_agency"
     t.boolean  "social_strategist"
-    t.boolean  "discovery"
-    t.boolean  "interaction"
-    t.boolean  "transaction"
-    t.boolean  "endorsement"
+    t.boolean  "dite_discovery"
+    t.boolean  "dite_interaction"
+    t.boolean  "dite_transaction"
+    t.boolean  "dite_endorsement"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
   end

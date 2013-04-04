@@ -9,6 +9,7 @@ end
 
 def show
   @profile = Profile.find(params[:id])
+  @units = @profile.for_agent(@profile.name)
 end
 
 end
