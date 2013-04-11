@@ -15,6 +15,8 @@ def show
   @market_data = market_data(name)
   @platform_story = platform_story(name)
   @case_study = case_study(name)
+  @faqs = []
+
 end
 
 

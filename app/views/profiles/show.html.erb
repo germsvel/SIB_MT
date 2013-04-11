@@ -1,9 +1,10 @@
+
 <h1 id="profile-name"><%= @profile.name %></h1>
 
 <a data-toggle="collapse" data-parent="#profile-name" href="#profile-desc">
   <h3 class="main-section" >Profile</h3>
 </a>
-<div id="profile-desc" class="collapse in">
+<div id="profile-desc" class="collapse in info-drop-down">
   <%= render @description %>
 </div>  <!-- end profile description-->
 
@@ -12,36 +13,47 @@
 <a data-toggle="collapse" data-parent="#profile-name" href="#market-data">
   <h3 class="main-section">Market Data</h3>
 </a>
-<div id="market-data" class="collapse in">
+<div id="market-data" class="collapse in info-drop-down">
   <%= render @market_data %>
 </div>  <!-- end market data-->
+
 
 <a data-toggle="collapse" data-parent="#profile-name" href="#platform-story">
   <h3 class="main-section">Platform Story</h3>
 </a>
-<div id="platform-story" class="collapse in">
+<div id="platform-story" class="collapse in info-drop-down">
   <%= render @platform_story %>
 </div>  <!-- end platform story-->
+
 
 <a data-toggle="collapse" data-parent="#profile-name" href="#case-study">
   <h3 class="main-section">Case Study</h3>
 </a>
-<div id="case-study" class="collapse in">
+<div id="case-study" class="collapse in info-drop-down">
   <%= render @case_study %>
 </div>  <!-- end case study -->
 
-
-<h3><%= link_to 'Frequently Asked Questions', '#' %></h3>
-
+<a data-toggle="collapse" data-parent="#profile-name" href="#faqs">
+<h3 class="main-section">Frequently Asked Questions</h3>
+</a>
+<div id="faqs" class="collapse in info-drop-down">
+  <%= render "faqs" %>
+</div>  <!-- end case study -->
 
 <a data-toggle="collapse" data-parent="#profile-name" href="#misc-resources">
 <h3>Miscellaneous Resources</h3>
 </a>
-<div id="misc-resources" class="collapse in">
+<div id="misc-resources" class="collapse in info-drop-down">
   <ul>
     <li><%= link_to 'Deck', "#" %> to send to customer</li>
   </ul>
 </div>  <!-- end misc-resources -->
 
-<h3><%= link_to 'Units', units_path %></h3>
-<%= render 'shared/table' %>
+<a data-toggle="collapse" data-parent="#profile-name" href="#units-table">
+<h3 class="main-section">Units</h3>
+</a>
+<div id="units-table" class="collapse in info-drop-down">
+  <ul>
+    <%= render 'shared/table' %>
+  </ul>
+</div>  <!-- end units-table -->    
