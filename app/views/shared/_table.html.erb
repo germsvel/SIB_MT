@@ -1,27 +1,37 @@
 
 <div id="table-name"></div>
-<table class="table table-hover">
+<table class="table table-striped">
   <tr>
     <th>Name</th>
     <th>Description</th>
     <th>Type</th>
-    <th colspan=3>Buyer Persona</th>
-    <th colspan=4>DITE</th>
-    <th>Delete</th>
+    <th>Image</th>
+    <!-- <th>Delete</th> -->
   </tr>
   <% @units.each do |unit| %>
   <tr>
-    <td><%= link_to unit.name, unit_path(unit) %></td>
+    <td><%= unit.name %></td>
     <td><%= unit.description %></td>
     <td><%= unit.unit_type %></td>
-    <td>CMO? <%= unit.cmo %></td>
-    <td>Creative Agency? <%= unit.creative_agency %></td>
-    <td>Social Strategist? <%= unit.social_strategist %></td>
-    <td>Discovery: <%= unit.dite_discovery %></td>
-    <td>Interaction: <%= unit.dite_interaction %></td>
-    <td>Transaction: <%= unit.dite_transaction %></td>
-    <td>Endorsement: <%= unit.dite_endorsement %></td>
-    <td><%= link_to 'Delete', unit_path(unit), :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><a href="#unit-image-modal-<%= unit.name.downcase.tr(' ', '_') %>" data-toggle="modal"><%= image_tag unit.thumbnail_path, :class => 'unit-thumbnail' %></a></td>
+    
+    <!-- <td><%#= link_to 'Delete', unit_path(unit), :confirm => 'Are you sure?', :method => :delete %></td> -->
   </tr>
+
+  <div id="unit-image-modal-<%= unit.name.downcase.tr(' ', '_') %>" class="modal hide fade" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <h3><%= unit.name %></h3>
+    </div>
+    <div class="modal-body">
+      <p><%= unit.unit_type %></p>
+      <%= image_tag unit.image_path, :class => 'unit-image'%>
+    </div>
+  </div>
+
+
+
   <% end %>
 </table>
+
+  

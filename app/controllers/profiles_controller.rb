@@ -10,7 +10,8 @@ end
 def show
   @profile = Profile.find(params[:id])
   name = @profile.name
-  @units = @profile.for_agent(name)
+  @units = Unit.all
+  # @profile.for_agent(name)
   @description = description(name)
   @market_data = market_data(name)
   @platform_story = platform_story(name)

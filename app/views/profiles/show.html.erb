@@ -1,3 +1,5 @@
+<div id="main-page-container" class="container">
+
 
 <h1 id="profile-name"><%= @profile.name %></h1>
 
@@ -21,7 +23,7 @@
 <a data-toggle="collapse" data-parent="#profile-name" href="#platform-story">
   <h3 class="main-section">Platform Story</h3>
 </a>
-<div id="platform-story" class="collapse in info-drop-down">
+<div id="platform-story" class="collapse info-drop-down">
   <%= render @platform_story %>
 </div>  <!-- end platform story-->
 
@@ -29,21 +31,21 @@
 <a data-toggle="collapse" data-parent="#profile-name" href="#case-study">
   <h3 class="main-section">Case Study</h3>
 </a>
-<div id="case-study" class="collapse in info-drop-down">
+<div id="case-study" class="collapse info-drop-down">
   <%= render @case_study %>
 </div>  <!-- end case study -->
 
 <a data-toggle="collapse" data-parent="#profile-name" href="#faqs">
 <h3 class="main-section">Frequently Asked Questions</h3>
 </a>
-<div id="faqs" class="collapse in info-drop-down">
+<div id="faqs" class="collapse info-drop-down">
   <%= render "faqs" %>
 </div>  <!-- end case study -->
 
 <a data-toggle="collapse" data-parent="#profile-name" href="#misc-resources">
-<h3>Miscellaneous Resources</h3>
+<h3 class="main-section">Miscellaneous Resources</h3>
 </a>
-<div id="misc-resources" class="collapse in info-drop-down">
+<div id="misc-resources" class="collapse info-drop-down">
   <ul>
     <li><%= link_to 'Deck', "#" %> to send to customer</li>
   </ul>
@@ -52,8 +54,11 @@
 <a data-toggle="collapse" data-parent="#profile-name" href="#units-table">
 <h3 class="main-section">Units</h3>
 </a>
-<div id="units-table" class="collapse in info-drop-down">
+<div id="units-table" class="collapse info-drop-down">
   <ul>
     <%= render 'shared/table' %>
   </ul>
-</div>  <!-- end units-table -->    
+</div>  <!-- end units-table -->  
+
+
+</div><!-- end main page container -->  

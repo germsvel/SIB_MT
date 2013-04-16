@@ -3,6 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
   margin-top: 80px;
+  background: rgba(54, 54, 54, .2);
+  //#ebe8df;
+  // #7d7d7b;
 }
 
 #home-main-container{
@@ -15,6 +18,10 @@ body {
   width: 400px;
 }
 
+div.navbar-inner a.brand {
+  padding-left: 13%;
+}
+
 
 .nav {
   font-size: 20px;
@@ -23,90 +30,130 @@ body {
   margin-bottom: auto;
 }
 
+#main-page-container {
+  background-color: #ffffff;
+  max-width: 900px;
+  padding-left: 2em;
+  padding-right: 2em;
+}
 
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 
-// html, body, div, span, applet, object, iframe,
-// h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-// a, abbr, acronym, address, big, cite, code,
-// del, dfn, em, img, ins, kbd, q, s, samp,
-// small, strike, strong, sub, sup, tt, var,
-// b, u, i, center,
-// dl, dt, dd, ol, ul, li,
-// fieldset, form, label, legend,
-// table, caption, tbody, tfoot, thead, tr, th, td,
-// article, aside, canvas, details, embed, 
-// figure, figcaption, footer, header, hgroup, 
-// menu, nav, output, ruby, section, summary,
-// time, mark, audio, video {
-//   margin: 0;
-//   padding: 0;
-//   border: 0;
-//   font-size: 100%;
-//   font: inherit;
-//   vertical-align: baseline;
-// }
-/* HTML5 display-role reset for older browsers */
-// article, aside, details, figcaption, figure, 
-// footer, header, hgroup, menu, nav, section {
-//   display: block;
-// }
-// body {
-//   line-height: 1;
-// }
-// ol, ul {
-//   list-style: none;
-// }
-// blockquote, q {
-//   quotes: none;
-// }
-// blockquote:before, blockquote:after,
-// q:before, q:after {
-//   content: '';
-//   content: none;
-// }
-// table {
-//   border-collapse: collapse;
-//   border-spacing: 0;
-// }
 
-// /* end reset */
+h1, h2, h3, h4, h5, h6 { 
+  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #545454; //#2c2c2c;
+  font-weight: normal;
+}
 
-// h1, h2, h3, h4, h5, h6 { 
-//   font-family: 'Droid Serif', serif;
-//   color: #2c2c2c;
-// }
+p, ol, ul {
+  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #545454; //#2c2c2c;
+  font-size: 1.05em;
+  line-height: 1.2em;
+}
 
-// p, ol, ul, li {
-//   font-family: 'Droid Sans', sans-serif;
-//   color: #2c2c2c;
-// }
+li {
+  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #545454; //#2c2c2c;
+  font-size: 1em;
+  line-height: 1.2em;
+}
 
-// body { 
-//   background-color: #426874;
-// }
 
-// table {
-//   background-color: #ebe8df;
-//   border-color: #cc4326;
-// }
+table {
+  background-color: #ebe8df;
+  border-color: #cc4326;
+}
 
-// h1 {
-//   font-size: 4em;
-// }
 
-// h2 {
-//   font-size: 3em
-// }
+h1 {
+  font-size: 2.57em;
 
-// p {
-//   font-size: 1.6em;
-// }
-// button {
-//   background-color: #cc4326;
-// }
+}
+
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 2em;
+  letter-spacing: .05em;
+}
+
+h4 {
+  font-size: 1.7em;
+ }
+
+
+
+ul.profile-info {
+  padding-left: 1.5em;
+  // list-style: none;
+} 
+
+.profile-name {
+  padding-left: 1.3em;
+}
+
+button {
+  background-color: #cc4326;
+}
+
+.main-section {
+  background-color: #426874;
+  color: #fff; //#ebe8df;
+  border-radius: 5px;
+}
+
+h3.main-section {
+  padding-left: .5em;
+}
+
+.info-drop-down {
+  color: #2c2c2c;
+  background-color: #ffffff;
+  margin-left: 1em;
+}
+.case-study-img {
+  height:auto; 
+  width:auto; 
+  max-width:300px;
+  padding-left: 10px;
+  padding-top: 20px;
+  border-color: #426874;
+  // border-radius: 15px; 
+}
+.toast-person-img {
+  height: 200px;
+  width: auto;
+  margin-left: 10px;
+  // padding-top: 20px;
+  border: solid 3px #426874 ;
+  // border-color: #426874;
+  border-radius: 5px;
+}
+
+.sample-script {
+  margin-left: 10%;
+  margin-right: 15%;
+}
+
+a:link {
+  color:#cc4326;
+  text-decoration:none;
+}      /* unvisited link */
+a:visited {
+  color:#cc4326;
+  text-decoration:none;
+}  /* visited link */
+a:hover {
+  color:#68a095;
+  text-decoration:none;
+}  /* mouse over link */
+a:active {
+  color:#426874;
+  text-decoration:none;
+}  /* selected link */
+
+
 
