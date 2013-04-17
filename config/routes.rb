@@ -1,10 +1,13 @@
 SIBMt::Application.routes.draw do
   
-  root :to => 'profiles#index'
+  root :to => 'profiles#show', :id => '1'
 
-  
 
-  resources :profiles, :only => [:index, :show]
+  match '/cmo' => 'profiles#show', :id => '1' 
+  match '/ss' => 'profiles#show', :id => '2' 
+  match '/ca' => 'profiles#show', :id => '3' 
+
+  resources :profiles, :only => [:show]
 
   resources :units, :only => [:index, :show, :new, :create, :destroy]
 

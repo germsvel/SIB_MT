@@ -1,10 +1,10 @@
 <div id="main-page-container" class="container">
 
 
-<h1 id="profile-name"><%= @profile.name %></h1>
+<h1 id="profile-title"> -- <%= @profile.name %> -- </h1>
 
 <a data-toggle="collapse" data-parent="#profile-name" href="#profile-desc">
-  <h3 class="main-section" >Profile</h3>
+  <h2 class="main-section" >Profile</h2>
 </a>
 <div id="profile-desc" class="collapse in info-drop-down">
   <%= render @description %>
@@ -13,7 +13,7 @@
 
 
 <a data-toggle="collapse" data-parent="#profile-name" href="#market-data">
-  <h3 class="main-section">Market Data</h3>
+  <h2 class="main-section">Market Data</h2>
 </a>
 <div id="market-data" class="collapse in info-drop-down">
   <%= render @market_data %>
@@ -21,7 +21,7 @@
 
 
 <a data-toggle="collapse" data-parent="#profile-name" href="#platform-story">
-  <h3 class="main-section">Platform Story</h3>
+  <h2 class="main-section">Platform Story</h2>
 </a>
 <div id="platform-story" class="collapse info-drop-down">
   <%= render @platform_story %>
@@ -29,21 +29,21 @@
 
 
 <a data-toggle="collapse" data-parent="#profile-name" href="#case-study">
-  <h3 class="main-section">Case Study</h3>
+  <h2 class="main-section">Case Study</h2>
 </a>
 <div id="case-study" class="collapse info-drop-down">
   <%= render @case_study %>
 </div>  <!-- end case study -->
 
 <a data-toggle="collapse" data-parent="#profile-name" href="#faqs">
-<h3 class="main-section">Frequently Asked Questions</h3>
+<h2 class="main-section">Frequently Asked Questions</h2>
 </a>
 <div id="faqs" class="collapse info-drop-down">
   <%= render "faqs" %>
 </div>  <!-- end case study -->
 
 <a data-toggle="collapse" data-parent="#profile-name" href="#misc-resources">
-<h3 class="main-section">Miscellaneous Resources</h3>
+<h2 class="main-section">Miscellaneous Resources</h2>
 </a>
 <div id="misc-resources" class="collapse info-drop-down">
   <ul>
@@ -52,9 +52,9 @@
 </div>  <!-- end misc-resources -->
 
 <a data-toggle="collapse" data-parent="#profile-name" href="#units-table">
-<h3 class="main-section">Units</h3>
+<h2 class="main-section">Units</h2>
 </a>
-<div id="units-table" class="collapse info-drop-down">
+<div id="units-table" class="collapse in info-drop-down">
   <ul>
     <%= render 'shared/table' %>
   </ul>

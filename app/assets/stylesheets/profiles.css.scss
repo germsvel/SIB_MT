@@ -3,9 +3,69 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
   margin-top: 80px;
-  background: rgba(54, 54, 54, .2);
+  background: rgba(54, 54, 54, .1);
   //#ebe8df;
   // #7d7d7b;
+}
+
+
+
+
+h1, h2, h3, h4, h5, h6 { 
+  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #545454; //#2c2c2c;
+  font-weight: normal;
+}
+
+p, ol, ul, li {
+  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #545454; //#2c2c2c;
+
+}
+
+p {
+  font-size: .8rem;
+  line-height: 1.7rem;
+}
+
+ol, ul {
+  font-size: .8rem;
+  line-height: 1.7rem;
+}
+
+// li {
+//   font-size: .9em;
+//   line-height: 1.7em;
+// }
+
+
+table {
+  background-color: #ebe8df;
+  border-color: #cc4326;
+}
+
+
+h1 {
+  font-size: 33px;
+
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+// h3 {
+//   font-size: 2em;
+//   letter-spacing: .05em;
+// }
+
+h4 {
+  font-size: 1.5em;
+ }
+
+
+button {
+  background-color: #cc4326;
 }
 
 #home-main-container{
@@ -18,16 +78,26 @@ body {
   width: 400px;
 }
 
+div.navbar-inner {
+  opacity: .9;
+}
+
 div.navbar-inner a.brand {
   padding-left: 13%;
 }
 
 
+
 .nav {
-  font-size: 20px;
-  
+  font-size: 20px; 
   margin-top: auto;
   margin-bottom: auto;
+  opacity: .5;
+}
+
+.navbar .nav {
+  margin-top: 20px;
+  margin-left: 15px;
 }
 
 #main-page-container {
@@ -39,73 +109,28 @@ div.navbar-inner a.brand {
 
 
 
-
-h1, h2, h3, h4, h5, h6 { 
-  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #545454; //#2c2c2c;
-  font-weight: normal;
-}
-
-p, ol, ul {
-  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #545454; //#2c2c2c;
-  font-size: 1.05em;
-  line-height: 1.2em;
-}
-
-li {
-  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #545454; //#2c2c2c;
-  font-size: 1em;
-  line-height: 1.2em;
-}
-
-
-table {
-  background-color: #ebe8df;
-  border-color: #cc4326;
-}
-
-
-h1 {
-  font-size: 2.57em;
-
-}
-
-h2 {
-  font-size: 2em;
-}
-h3 {
-  font-size: 2em;
-  letter-spacing: .05em;
-}
-
-h4 {
-  font-size: 1.7em;
- }
-
-
-
 ul.profile-info {
   padding-left: 1.5em;
   // list-style: none;
 } 
 
+#profile-title {
+  text-align: center;
+}
+
 .profile-name {
   padding-left: 1.3em;
 }
 
-button {
-  background-color: #cc4326;
-}
 
 .main-section {
-  background-color: #426874;
-  color: #fff; //#ebe8df;
-  border-radius: 5px;
+  // background-color: #426874;
+  color: #545454; //#ebe8df;
+  border-bottom: 1px solid rgba(54, 54, 54, .1);
+  // border-radius: 5px;
 }
 
-h3.main-section {
+h2.main-section {
   padding-left: .5em;
 }
 
@@ -124,11 +149,11 @@ h3.main-section {
   // border-radius: 15px; 
 }
 .toast-person-img {
-  height: 200px;
+  height: 170px;
   width: auto;
   margin-left: 10px;
   // padding-top: 20px;
-  border: solid 3px #426874 ;
+  border: solid 2px #426874 ;
   // border-color: #426874;
   border-radius: 5px;
 }
@@ -136,6 +161,12 @@ h3.main-section {
 .sample-script {
   margin-left: 10%;
   margin-right: 15%;
+}
+
+#units-table{
+  width:700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 a:link {
