@@ -11,6 +11,5 @@ SIBMt::Application.routes.draw do
 
   resources :units, :only => [:index, :show, :new, :create, :destroy]
 
-  resources :faqs, :only => [:index, :show, :new, :create, :destroy]
-
+  resources :faqs, :only => [:index]
 end
