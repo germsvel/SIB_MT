@@ -2,12 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-  margin-top: 80px;
+  padding-top: 80px;
   background: rgba(54, 54, 54, .1);
   //#ebe8df;
   // #7d7d7b;
-}
 
+  @media screen and (max-width: 976px) { 
+    padding-top: 0;
+  }
+}
 
 
 
@@ -54,10 +57,6 @@ h2 {
   font-size: 1.75rem;
 }
 
-// h3 {
-//   font-size: 2em;
-//   letter-spacing: .05em;
-// }
 
 h4 {
   font-size: 1.5em;
@@ -66,6 +65,16 @@ h4 {
 
 button {
   background-color: #cc4326;
+}
+
+#main-page-container{
+  background-color: #ffffff;
+  max-width: 900px;
+  padding-left: 2em;
+  padding-right: 2em;
+  @media screen and (max-width: 976px) { 
+    margin-top: -20px;
+  }  
 }
 
 #home-main-container{
@@ -99,14 +108,6 @@ div.navbar-inner a.brand {
   margin-top: 20px;
   margin-left: 15px;
 }
-
-#main-page-container {
-  background-color: #ffffff;
-  max-width: 900px;
-  padding-left: 2em;
-  padding-right: 2em;
-}
-
 
 
 ul.profile-info {
@@ -164,7 +165,7 @@ h2.main-section {
 }
 
 #units-table{
-  width:700px;
+  max-width:700px;
   margin-left: auto;
   margin-right: auto;
 }

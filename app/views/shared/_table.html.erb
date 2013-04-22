@@ -5,15 +5,16 @@
     <th>Name</th>
     <th>Description</th>
     <th>Type</th>
-    <th>Image</th>
+    <th class="hidden-phone">Image</th>
     <!-- <th>Delete</th> -->
   </tr>
   <% @units.each do |unit| %>
   <tr>
-    <td><%= unit.name %></td>
+    <td><%= unit.name %><br />
+      <a href="#unit-image-modal-<%= unit.name.downcase.tr(' ', '_') %>" data-toggle="modal"><%= image_tag unit.thumbnail_path, :class => 'unit-thumbnail visible-phone' %></a></td>
     <td><%= unit.description %></td>
     <td><%= unit.unit_type %></td>
-    <td><a href="#unit-image-modal-<%= unit.name.downcase.tr(' ', '_') %>" data-toggle="modal"><%= image_tag unit.thumbnail_path, :class => 'unit-thumbnail' %></a></td>
+    <td class=" hidden-phone"><a href="#unit-image-modal-<%= unit.name.downcase.tr(' ', '_') %>" data-toggle="modal"><%= image_tag unit.thumbnail_path, :class => 'unit-thumbnail' %></a></td>
     
     <!-- <td><%#= link_to 'Delete', unit_path(unit), :confirm => 'Are you sure?', :method => :delete %></td> -->
   </tr>
