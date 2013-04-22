@@ -4,13 +4,9 @@ class CreateUnits < ActiveRecord::Migration
       t.string :name
       t.string :unit_type
       t.text :description
-      t.boolean :cmo
-      t.boolean :creative_agency
-      t.boolean :social_strategist
-      t.boolean :dite_discovery
-      t.boolean :dite_interaction
-      t.boolean :dite_transaction
-      t.boolean :dite_endorsement
+      t.text :long_description
+      t.string :image_path
+      t.string :thumbnail_path
 
       t.timestamps
     end

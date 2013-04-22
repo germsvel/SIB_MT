@@ -29,11 +29,11 @@ ActiveRecord::Schema.define(:version => 20130415185933) do
     t.string   "name"
     t.string   "unit_type"
     t.text     "description"
+    t.text     "long_description"
+    t.string   "image_path"
+    t.string   "thumbnail_path"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
-    t.string   "image_path"
-    t.text     "long_description"
-    t.string   "thumbnail_path"
   end
 
 end
