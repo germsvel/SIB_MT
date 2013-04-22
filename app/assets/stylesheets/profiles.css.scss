@@ -36,10 +36,7 @@ ol, ul {
   line-height: 1.7rem;
 }
 
-// li {
-//   font-size: .9em;
-//   line-height: 1.7em;
-// }
+
 
 
 table {
@@ -112,11 +109,11 @@ div.navbar-inner a.brand {
 
 ul.profile-info {
   padding-left: 1.5em;
-  // list-style: none;
 } 
 
 #profile-title {
   text-align: center;
+  min-width: 295px;
 }
 
 .profile-name {
@@ -125,9 +122,9 @@ ul.profile-info {
 
 
 .main-section {
-  // background-color: #426874;
-  color: #545454; //#ebe8df;
-  border-bottom: 1px solid rgba(54, 54, 54, .1);
+  background-color: #426874;
+  color: #ebe8df; //#545454; 
+  // border-bottom: 1px solid rgba(54, 54, 54, .1);
   // border-radius: 5px;
 }
 
@@ -140,6 +137,25 @@ h2.main-section {
   background-color: #ffffff;
   margin-left: 1em;
 }
+
+
+.modal-header h3 {
+  text-align: center;
+}
+
+.modal-body {
+  max-height: 800px;
+  p {
+    text-align: center;
+  }
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
 .case-study-img {
   height:auto; 
   width:auto; 
@@ -147,15 +163,12 @@ h2.main-section {
   padding-left: 10px;
   padding-top: 20px;
   border-color: #426874;
-  // border-radius: 15px; 
 }
 .toast-person-img {
   height: 170px;
   width: auto;
   margin-left: 10px;
-  // padding-top: 20px;
   border: solid 2px #426874 ;
-  // border-color: #426874;
   border-radius: 5px;
 }
 
@@ -168,6 +181,12 @@ h2.main-section {
   max-width:700px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.dropdown-arrow{
+  float:right;
+  font-size: .5em;
+  font-weight: normal;
 }
 
 a:link {
