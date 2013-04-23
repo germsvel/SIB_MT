@@ -1,22 +1,17 @@
 
+<div class="container">
+
+  <div>
+     <%= link_to "<i class='icon-edit'> edit</i>".html_safe, edit_profile_market_datum_path(@profile.market_data), :class => 'btn edit-btn' %>
+    <% @market_datum.each do |market_datum| %>
+    <h4 class="market-data-title"><%= market_datum.title %></h4>
+      <div class="market-data-info">
+      <%= markdown(market_datum.description) %>
+      </div><!-- end list for cmo market data -->
+    <% end %>
+  </div>
 
 
-<h4>Pain points</h4>
-    <ul>
-      <li>73% of CEOs say marketers lack credibility - How do I change this and validate what I’m doing to the CEO and CFO? <%= link_to 'Link to article', "http://www.cmo.com/articles/2011/6/15/73-of-ceos-say-marketers-lack-credibility.html" %></li>
-      <li>ROI</li>
-      <ul>
-        <li>How do I quantify the value of my brand to the overall business and how do I measure the impact of marketing activities/investments on that value?</li>
-        <li>How will you help me demonstrate a strong ROI on integrated marketing?</li>
-        <li>How do I prove that my marketing programs are influencing sales (and revenue)?</li>
-        <li>Where can we better optimize the purchase pathway and our customer data?</li>
-      </ul>
-      <li>Client Retention</li>
-      <ul>
-        <li>How do I utilize marketing budgets to achieve the right balance between long term brand building and near term business acquisition?</li>
-        <li>Does our ‘story’ and content strategy enhance the customer experience? (and bring back repeat clients)</li>
-      </ul>
+</div>
 
 
-
-   </ul>

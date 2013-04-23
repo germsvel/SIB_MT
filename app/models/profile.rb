@@ -1,8 +1,7 @@
 class Profile < ActiveRecord::Base
   attr_accessible :name, :description
 
-  has_many :market_data
-
+  has_many :market_data, :inverse_of => :profile
 
 
   scope :for_cmo, where(:cmo => true) 

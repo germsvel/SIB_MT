@@ -65,6 +65,18 @@ button {
   background-color: #cc4326;
 }
 
+textarea {
+  width: 700px;
+  
+  @media screen and (max-width: 730px) { 
+   max-width: 600px;   
+  }
+
+  @media screen and (max-width: 630px) { 
+   max-width: 350px;   
+  }  
+}
+
 a:link {
   color:#cc4326;
   text-decoration:none;

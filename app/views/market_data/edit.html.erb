@@ -3,16 +3,16 @@
 <div id="market-data-container" class="container">
 
 
-  <h2>Edit the <%= @market_datum.name %> market data</h2>
+  <h2>Edit the <%= @profile.name %> market data</h2>
 
   <div id="market-data-form">
 
-      <%= form_for @market_datum do |f| %>
-      <table class="new-market-datum-form">
+      <%= form_for @market_datum, :url => profile_market_datum_path(@market_datum) do |f| %>
+      <table class="new-market-data-form">
 
         <tr>
-          <%= f.label :name %>
-          <%= f.text_field :name %>
+          <%= f.label :title %>
+          <%= f.text_field :title %>
         </tr>
         <tr>
           <%= f.label :description %>
@@ -22,7 +22,7 @@
       </table>    
       </br>
       <div class='submit-btn'>
-          <%= f.submit :class => 'btn'%>
+          <%= f.submit "Save market data", :class => 'btn'%>
       </div>
       <% end %>
 

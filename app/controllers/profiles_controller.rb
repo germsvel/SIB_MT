@@ -14,6 +14,7 @@ def show
   @case_study = case_study(name)
   @faqs = Faq.all
   @misc_resources = MiscResource.all
+  @market_datum = @profile.market_data
 
 end
 

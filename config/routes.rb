@@ -1,6 +1,7 @@
 SIBMt::Application.routes.draw do
   
 
+
   root :to => 'profiles#show', :id => '1'
 
 
@@ -8,7 +9,10 @@ SIBMt::Application.routes.draw do
   match '/ss' => 'profiles#show', :id => '2' 
   match '/ca' => 'profiles#show', :id => '3' 
 
-  resources :profiles, :only => [:show, :edit, :update]
+  resources :profiles, :only => [:show, :edit, :update] do 
+    resources :market_data, :only => [:edit, :update]
+    resources :platform_stories, :only => [:new, :create, :edit, :update, :delete]
+  end
 
   resources :units, :only => [:index, :show, :new, :create, :destroy]
 
@@ -16,5 +20,4 @@ SIBMt::Application.routes.draw do
 
   resources :misc_resources, :only => [:new, :create, :destroy]
 
-  resources :market_data, :only => [:edit, :update]
 end
