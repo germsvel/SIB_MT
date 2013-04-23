@@ -1,0 +1,27 @@
+<div id="faqs-container" class="container">
+
+  <h2>Add to the knowledge database</h2>
+
+  <div id="faqs-form">
+
+      <%= form_for @faq do |f| %>
+      <table class="new-faq-form">
+
+        <tr>
+          <%= f.label :question %>
+          <%= f.text_field :question %>
+        </tr>
+        <tr>
+          <%= f.label :answer %>
+          <%= f.text_field :answer %>
+        </tr>
+
+      </table>    
+      </br>
+      <div class='submit-btn'>
+          <%= f.submit "Submit questions", :class => 'btn' %>
+      </div>
+      <% end %>
+
+    </div>
+</div>

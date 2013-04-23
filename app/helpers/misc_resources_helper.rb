@@ -1,0 +1,2 @@
+module MiscResourcesHelper
+end

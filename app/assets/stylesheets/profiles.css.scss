@@ -1,6 +1,10 @@
 // Place all the styles related to the Profiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* ===================== */
+/*   General tags        */
+/* ===================== */
 body {
   padding-top: 80px;
   background: rgba(54, 54, 54, .1);
@@ -11,7 +15,6 @@ body {
     padding-top: 0;
   }
 }
-
 
 
 h1, h2, h3, h4, h5, h6 { 
@@ -35,8 +38,6 @@ ol, ul {
   font-size: .8rem;
   line-height: 1.7rem;
 }
-
-
 
 
 table {
@@ -64,6 +65,28 @@ button {
   background-color: #cc4326;
 }
 
+a:link {
+  color:#cc4326;
+  text-decoration:none;
+}      /* unvisited link */
+a:visited {
+  color:#cc4326;
+  text-decoration:none;
+}  /* visited link */
+a:hover {
+  color:#68a095;
+  text-decoration:none;
+}  /* mouse over link */
+a:active {
+  color:#426874;
+  text-decoration:none;
+}  /* selected link */
+
+
+/* ===================== */
+/*         IDs           */
+/* ===================== */
+
 #main-page-container{
   background-color: #ffffff;
   max-width: 900px;
@@ -84,6 +107,35 @@ button {
   width: 400px;
 }
 
+#profile-title {
+  text-align: center;
+  min-width: 295px;
+}
+
+#units-container{
+  h2 {
+    text-align: center;
+  }
+  #units-form{
+  display: block;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  }  
+}
+
+#units-table{
+  max-width:700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===================== */
+/*       Classes         */ 
+/* ===================== */
+
+// navbar
+
 div.navbar-inner {
   opacity: .9;
 }
@@ -91,8 +143,6 @@ div.navbar-inner {
 div.navbar-inner a.brand {
   padding-left: 13%;
 }
-
-
 
 .nav {
   font-size: 20px; 
@@ -106,18 +156,15 @@ div.navbar-inner a.brand {
   margin-left: 15px;
 }
 
+// general profile
 
-ul.profile-info {
-  padding-left: 1.5em;
-} 
-
-#profile-title {
-  text-align: center;
-  min-width: 295px;
+.edit-btn {
+  float: right;
 }
 
-.profile-name {
-  padding-left: 1.3em;
+.back-btn{
+  // float:left;
+  margin-left: -4%;
 }
 
 
@@ -135,6 +182,19 @@ h2.main-section {
   background-color: #ffffff;
   margin-left: 1em;
 }
+
+
+// profile description
+
+div.profile-info {
+  padding-left: 1.5em;
+} 
+
+
+.profile-name {
+  padding-left: 1.3em;
+}
+
 
 
 .modal-header h3 {
@@ -175,34 +235,9 @@ h2.main-section {
   margin-right: 15%;
 }
 
-#units-table{
-  max-width:700px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
-.dropdown-arrow{
-  float:right;
-  font-size: .5em;
-  font-weight: normal;
-}
 
-a:link {
-  color:#cc4326;
-  text-decoration:none;
-}      /* unvisited link */
-a:visited {
-  color:#cc4326;
-  text-decoration:none;
-}  /* visited link */
-a:hover {
-  color:#68a095;
-  text-decoration:none;
-}  /* mouse over link */
-a:active {
-  color:#426874;
-  text-decoration:none;
-}  /* selected link */
+
 
 
 

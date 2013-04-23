@@ -1,9 +1,12 @@
 
-<ul>
-  <li>example question</li>
-  <li>example answer</li>
+<ol>
 <% @faqs.each do |faq| %>
-  <li><%= faq.question %></li>
-  <li><%= faq.answer %></li>
+  <a data-toggle="collapse" data-parent="#profile-name" href="#answer-<%= faq.id %>">
+    <li class="question"><%= faq.question %> </li>
+  </a> 
+    <ul id="answer-<%= faq.id %>" class="collapse">
+      <li class="answer"><%= faq.answer %>| <%= link_to "Delete", faq_path(faq.id), :method=>:delete, :class=>:destroy,:confirm=>"Are you sure?"%></li> 
+    </ul>
 <% end %>
-</ul>
+</ol>
+<p><%= link_to "Add question", new_faq_path, :class => 'btn btn-small' %></p>

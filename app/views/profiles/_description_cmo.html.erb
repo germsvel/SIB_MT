@@ -1,3 +1,5 @@
+
+
 <div class="container">
 
   <div class="pull-left">
@@ -5,16 +7,12 @@
   </div>
 
   <div class="pull-left">
+     <%= link_to "<i class='icon-edit'> edit</i>".html_safe, edit_profile_path(@profile), :class => 'btn edit-btn' %>
     <h4 class="profile-name">CMO Chris</h4>
-      <ul class="profile-info">
-        <li>Oversees the entire marketing operation</li>
-        <li>Responsible for building company identity for the long term</li>    
-        <li>Responsible for creating marketing initiatives that influences sales</li>
-        <li>Primary point of contact for all business development</li>    
-        <li>Has the final decision in strategy</li>
-        <li>Usually have at least 10 years’ experience, and often a graduate degree</li>
-        <li>CMOs like referrals from social media experts</li>
-      </ul><!-- end list for cmo profile -->
+      <div class="profile-info">
+      <%= markdown(@profile.description) %>
+      </div><!-- end list for cmo profile -->
   </div>
+
 
 </div>

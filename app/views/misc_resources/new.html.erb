@@ -1,0 +1,32 @@
+<div id="misc-resources-container" class="container">
+
+  <h2>Add to the pool of resources</h2>
+
+  <div id="misc-resources-form">
+
+      <%= form_for @misc_resource do |f| %>
+      <table class="new-misc-resource-form">
+
+        <tr>
+          <%= f.label :description %>
+          <%= f.text_field :description %>
+        </tr>
+        <tr>
+          <%= f.label :link_url, "Link to resource" %>
+          <div class ="input-prepend">
+            <span class="add-on">http://</span>
+             <%= f.text_field :link_url %>
+          </div>
+        </tr>
+
+      </table>    
+      </br>
+      <div class='submit-btn'>
+          <%= f.submit :class => 'btn'%>
+      </div>
+      <% end %>
+
+    </div>
+
+
+</div>

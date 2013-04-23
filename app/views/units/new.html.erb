@@ -1,42 +1,47 @@
-<h2>Hello, please create a new unit below</h2>
+<div id="units-container" class="container">
 
-<%= form_for @unit do |f| %>
-<table class="new-unit-form">
+  <h2>Create a new unit below</h2>
 
-  <tr>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </tr>
-  <tr>
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-  </tr>
+  <div id="units-form">
 
-  <tr>
-    <%= f.label :long_description %>
-    <%= f.text_area :long_description %>
-  </tr>
+      <%= form_for @unit do |f| %>
+      <table class="new-unit-form">
 
-  <tr>
-    <%= f.label :unit_type %>
-    <%= f.text_field :unit_type %>
-  </tr>
+        <tr>
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+        </tr>
+        <tr>
+          <%= f.label :description %>
+          <%= f.text_field :description %>
+        </tr>
 
-  <tr>
-    <%= f.label :image_path %>
-    <%= f.text_field :image_path %>
-  </tr>
-  
-  <tr>
-    <%= f.label :thumbnail_path %>
-    <%= f.text_field :thumbnail_path %>
-  </tr>
+        <tr>
+          <%= f.label :long_description %>
+          <%= f.text_area :long_description %>
+        </tr>
 
-</table>    
-</br>
-<div class='submit-btn'>
-    <%= f.submit :class => 'btn'%>
+        <tr>
+          <%= f.label :unit_type %>
+          <%= f.text_field :unit_type %>
+        </tr>
+
+        <tr>
+          <%= f.label :image_path %>
+          <%= f.text_field :image_path %>
+        </tr>
+        
+        <tr>
+          <%= f.label :thumbnail_path %>
+          <%= f.text_field :thumbnail_path %>
+        </tr>
+
+      </table>    
+      </br>
+      <div class='submit-btn'>
+          <%= f.submit :class => 'btn'%>
+      </div>
+      <% end %>
+
+    </div>
 </div>
-<% end %>
-
-  

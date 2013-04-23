@@ -1,6 +1,8 @@
 class Profile < ActiveRecord::Base
   attr_accessible :name, :description
 
+  has_many :market_data
+
 
 
   scope :for_cmo, where(:cmo => true) 

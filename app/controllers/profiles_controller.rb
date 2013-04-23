@@ -12,12 +12,29 @@ def show
   @market_data = market_data(name)
   @platform_story = platform_story(name)
   @case_study = case_study(name)
-  @faqs = []
+  @faqs = Faq.all
+  @misc_resources = MiscResource.all
 
 end
 
+def edit
+  @profile = Profile.find(params[:id])
+end
+
+
+def update
+  @profile = Profile.find(params[:id])
+
+  if @profile.update_attributes(params[:profile])
+    flash[:notice] = "Thank you for updating the profile"
+    redirect_to profile_path(@profile)
+  else
+    render 'edit'
+  end
+end
 
 private
+
 
 def market_data(profile_name)
   return "market_data_cmo" if profile_name == 'CMO'

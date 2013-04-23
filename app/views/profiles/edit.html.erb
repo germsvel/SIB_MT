@@ -1,0 +1,32 @@
+
+<%= link_to "<i class='icon-backward'></i>".html_safe, :back, :class => 'btn back-btn' %>
+<div id="profiles-container" class="container">
+
+
+  <h2>Edit the <%= @profile.name %> profile</h2>
+
+  <div id="profiles-form">
+
+      <%= form_for @profile do |f| %>
+      <table class="new-profile-form">
+
+        <tr>
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+        </tr>
+        <tr>
+          <%= f.label :description %>
+          <%= f.text_area :description %>
+        </tr>
+
+      </table>    
+      </br>
+      <div class='submit-btn'>
+          <%= f.submit :class => 'btn'%>
+      </div>
+      <% end %>
+
+    </div>
+
+
+</div>

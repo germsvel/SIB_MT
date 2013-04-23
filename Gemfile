@@ -35,6 +35,8 @@ gem 'twitter-bootstrap-rails'
 
 gem 'unicorn'
 
+gem 'redcarpet'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

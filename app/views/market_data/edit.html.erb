@@ -1,0 +1,32 @@
+
+<%= link_to "<i class='icon-backward'></i>".html_safe, :back, :class => 'btn back-btn' %>
+<div id="market-data-container" class="container">
+
+
+  <h2>Edit the <%= @market_datum.name %> market data</h2>
+
+  <div id="market-data-form">
+
+      <%= form_for @market_datum do |f| %>
+      <table class="new-market-datum-form">
+
+        <tr>
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+        </tr>
+        <tr>
+          <%= f.label :description %>
+          <%= f.text_area :description %>
+        </tr>
+
+      </table>    
+      </br>
+      <div class='submit-btn'>
+          <%= f.submit :class => 'btn'%>
+      </div>
+      <% end %>
+
+    </div>
+
+
+</div>
