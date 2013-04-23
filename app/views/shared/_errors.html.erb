@@ -1,0 +1,11 @@
+  
+
+  <div id="errorExplanation">
+    <h2><%= pluralize(object.errors.count, "error") %> prohibited
+        this <%= object.title %> from being saved:</h2>
+    <ul>
+    <% object.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    </ul>
+    <% end %>
+  </div>

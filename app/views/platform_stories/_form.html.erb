@@ -1,0 +1,22 @@
+
+      <%= form_for [@profile, @platform_story], :url => url do |f| %>
+      <table class="new-platform-story-form">
+      <%= errors_for(@platform_story) %>
+
+        <tr>
+          <%= f.label :title %>
+          <%= f.text_field :title %>
+        </tr>
+        <tr>
+          <%= f.label :description %>
+          <%= f.text_area :description %>
+        </tr>
+
+      </table>    
+      </br>
+      <div class='submit-btn'>
+          <%= f.submit :class => 'btn'%>
+      </div>
+      <% end %>
+
+ 

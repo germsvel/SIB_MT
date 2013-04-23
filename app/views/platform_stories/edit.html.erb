@@ -1,2 +1,15 @@
-<h1>PlatformStories#edit</h1>
-<p>Find me in app/views/platform_stories/edit.html.erb</p>
+
+<%= link_to "<i class='icon-backward'></i>".html_safe, :back, :class => 'btn back-btn' %>
+<div id="platform-story-container" class="container">
+
+
+  <h2>Edit the <%= @profile.name %> platform story</h2>
+
+  <div id="platform-story-form">
+
+      <%= render 'form', :url => profile_platform_story_path(@profile, @platform_story) %>
+
+    </div>
+
+
+</div>
