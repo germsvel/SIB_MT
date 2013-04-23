@@ -1,5 +1,5 @@
 class Profile < ActiveRecord::Base
-  attr_accessible :name, :description
+  attr_accessible :name, :description, :title, :img_url
 
   has_many :market_data, :inverse_of => :profile
   has_many :platform_stories

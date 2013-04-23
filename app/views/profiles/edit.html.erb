@@ -8,15 +8,19 @@
   <div id="profiles-form">
 
       <%= form_for @profile do |f| %>
-      <table class="new-profile-form">
+      <table class="edit-profile-form">
 
         <tr>
-          <%= f.label :name %>
-          <%= f.text_field :name %>
+          <%= f.label :title, "Persona's Title" %>
+          <%= f.text_field :title %>
         </tr>
         <tr>
           <%= f.label :description %>
           <%= f.text_area :description %>
+        </tr>
+        <tr>
+          <%= f.label :img_url, "Image filename" %>
+          <%= f.text_field :img_url %>
         </tr>
 
       </table>    

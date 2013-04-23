@@ -1,14 +1,14 @@
 <div id="main-page-container" class="container">
 
 
-<h1 id="profile-title"> -- <%= @profile.name %> -- </h1>
+<h1 id="profile-name"> -- <%= @profile.name %> -- </h1>
 
 <a data-toggle="collapse" data-parent="#profile-name" href="#profile-desc">
   <h2 class="main-section">Profile </h2> 
   
 </a>
 <div id="profile-desc" class="collapse in info-drop-down">
-  <%= render @description %>
+  <%= render "description" %>
 </div>  <!-- end profile description-->
 
 
