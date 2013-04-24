@@ -1,0 +1,27 @@
+    <div id="case-studies-form">
+
+      <%= form_for [@profile, @case_study], :url => url do |f| %>
+      <table class="case-study-form">
+      <%= errors_for(@case_study) %>
+
+        <tr>
+          <%= f.label :title %>
+          <%= f.text_field :title %>
+        </tr>
+        <tr>
+          <%= f.label :description %>
+          <%= f.text_area :description %>
+        </tr>
+        <tr>
+          <%= f.label :img_url, "Image filename" %>
+          <%= f.text_field :img_url %>
+        </tr>
+
+      </table>    
+      </br>
+      <div class='submit-btn'>
+          <%= f.submit :class => 'btn'%>
+      </div>
+      <% end %>
+
+    </div>

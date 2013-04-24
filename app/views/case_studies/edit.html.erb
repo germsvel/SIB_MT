@@ -1,2 +1,12 @@
-<h1>CaseStudies#edit</h1>
-<p>Find me in app/views/case_studies/edit.html.erb</p>
+
+<%= link_to back_btn(), :back, :class => 'btn back-btn' %>
+<div id="case-studies-container" class="container">
+
+
+  <h2>Edit the <%= @profile.name %> case study</h2>
+
+  <%= render "form", :url => profile_case_study_path(@profile, @case_study) %>
+
+
+
+</div>

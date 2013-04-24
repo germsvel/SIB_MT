@@ -27,17 +27,11 @@ class PlatformStoriesController < ApplicationController
 
     if @platform_story.update_attributes(params[:platform_story])
       flash[:notice] = "Thank you for correcting that"
-      redirect_to profile_path(params[:profile_id])
+      redirect_to profile_path(@profile)
     else
       render 'edit'
     end
   end
 
-
-  private
-
-  def set_profile
-    @profile = Profile.find(params[:profile_id])
-  end
 
 end

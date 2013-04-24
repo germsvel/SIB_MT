@@ -1,0 +1,33 @@
+
+<div class="container">
+  <div class="row">
+
+  <% @profile.case_studies.each do |case_study| %>
+    <div class="span6">
+      <h4 class="case-study-title"><%= case_study.title %></h4>
+        <div class="case-study-info">
+          <%= markdown(case_study.description) %>
+        </div><!-- end list for casestudy -->
+    </div>    
+    <%= link_to edit_btn("edit"), edit_profile_case_study_path(@profile, case_study), :class => 'btn edit-btn pull-right' %>
+        
+    <div class="span5">
+      <a href="#case-study-modal" data-toggle="modal"><%= image_tag case_study.img_url, :class => 'case-study-img' %></a>
+    </div>
+    
+
+      <div id="case-study-modal" class="modal hide fade" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+        <div class="modal-body">
+          <%= image_tag case_study.img_url %>
+        </div>
+      </div>
+
+
+  <% end %>
+  </div>
+
+<%= link_to add_btn(" Add case study"), new_profile_case_study_path(@profile), :class => 'btn new-btn' %>
+</div>
