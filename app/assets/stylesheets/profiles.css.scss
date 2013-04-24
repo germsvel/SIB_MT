@@ -11,7 +11,7 @@ body {
   //#ebe8df;
   // #7d7d7b;
 
-  @media screen and (max-width: 976px) { 
+  @media screen and (max-width: 1200px) { 
     padding-top: 0;
   }
 }
@@ -75,6 +75,21 @@ textarea {
   @media screen and (max-width: 630px) { 
    max-width: 350px;   
   }  
+}
+
+blockquote {
+  
+  max-width: 600px;
+  background-color: #ffffff;
+  padding: 0 10% 0 10%;
+  margin: 0 0 0 0;
+  border-left: 0;
+
+  p {
+    font-size: .8rem;
+    line-height: 1.7rem;
+    padding-bottom: 1rem;
+  }
 }
 
 a:link {
@@ -203,10 +218,21 @@ div.profile-info {
 } 
 
 
-.profile-name {
-  padding-left: 1.3em;
+#profile-name {
+  text-align: center;
 }
 
+.profile-title{
+  padding-left: 1.8rem;
+}
+
+.platform-story-info {
+  padding-bottom: 1rem;
+}
+
+.market-data-info {
+  margin-right: 10%;
+}
 
 
 .modal-header h3 {

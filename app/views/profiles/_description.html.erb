@@ -1,18 +1,20 @@
 
 
-<div class="container">
+<div class="description-container">
+  
+  <%= link_to edit_btn("edit"), edit_profile_path(@profile), :class => 'btn btn-small edit-btn' %>
 
   <div class="pull-left">
     <%= image_tag @profile.img_url, :class => 'toast-person-img' %>
   </div>
 
+
   <div class="pull-left">
-     <%= link_to edit_btn("edit"), edit_profile_path(@profile), :class => 'btn edit-btn' %>
     <h4 class="profile-title"><%= @profile.title %></h4>
       <div class="profile-info">
       <%= markdown(@profile.description) %>
-      </div><!-- end list for cmo profile -->
-  </div>
+      </div><!-- end list profile info -->
+  </div><!-- end list profile description -->
   
 <!-- "Toast-Person-CMO.jpg" -->
 

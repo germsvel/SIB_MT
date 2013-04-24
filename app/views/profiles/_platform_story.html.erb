@@ -1,16 +1,16 @@
 
-<div class="container">
+<div class="platform-story-container">
   <div>
     <% @profile.platform_stories.each do |platform_story| %>
-     <%= link_to edit_btn("edit"), edit_profile_platform_story_path(@profile, platform_story), :class => 'btn edit-btn' %>
+     <%= link_to edit_btn("edit"), edit_profile_platform_story_path(@profile, platform_story), :class => 'btn btn-small edit-btn' %>
     <h4 class="platform-story-title"><%= platform_story.title %></h4>
       <div class="platform-story-info">
       <%= markdown(platform_story.description) %>
-      </div><!-- end list for cmo platform story -->
+      </div><!-- end platform story info-->
     <% end %>
-  </div>
+  </div><!-- end list of platform stories -->
 
-<%= link_to add_btn(" Add platform story"), new_profile_platform_story_path(@profile), :class => 'btn new-btn' %>
+<%= link_to add_btn(" Add platform story"), new_profile_platform_story_path(@profile), :class => 'btn btn-small new-btn' %>
 
 </div>
 

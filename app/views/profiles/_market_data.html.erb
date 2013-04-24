@@ -1,9 +1,9 @@
 
-<div class="container">
+<div class="market-data-container">
 
   <div>
     <% @profile.market_data.each do |market_datum| %>
-    <%= link_to edit_btn("edit"), edit_profile_market_datum_path(@profile, market_datum), :class => 'btn edit-btn' %>
+    <%= link_to edit_btn("edit"), edit_profile_market_datum_path(@profile, market_datum), :class => 'btn btn-small edit-btn' %>
     <h4 class="market-data-title"><%= market_datum.title %></h4>
       <div class="market-data-info">
       <%= markdown(market_datum.description) %>
