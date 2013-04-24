@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130423220028) do
+ActiveRecord::Schema.define(:version => 20130424014413) do
+
+  create_table "case_studies", :force => true do |t|
+    t.integer  "profile_id"
+    t.string   "title"
+    t.text     "description"
+    t.string   "img_url"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "faqs", :force => true do |t|
     t.datetime "created_at",  :null => false

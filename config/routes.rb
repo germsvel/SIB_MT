@@ -9,8 +9,9 @@ SIBMt::Application.routes.draw do
   match '/ca'  => 'profiles#show', :id => '3' 
 
   resources :profiles, :only => [:show, :edit, :update] do
-    resources :platform_stories,  :only => [:new, :create, :edit, :update, :delete]
+    resources :platform_stories,  :only => [:new, :create, :edit, :update]
     resources :market_data,       :only => [:edit, :update]
+    resources :case_studies,      :only => [:new, :create, :edit, :update]
   end
   resources :units,             :only => [:index, :show, :new, :create, :destroy]
   resources :faqs,              :only => [:index, :new, :create, :destroy]
