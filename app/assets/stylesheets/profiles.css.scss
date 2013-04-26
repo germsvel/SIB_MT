@@ -134,10 +134,11 @@ a:active {
   width: 400px;
 }
 
-#profile-title {
+#profile-name {
   text-align: center;
   min-width: 295px;
 }
+
 
 #units-container{
   h2 {
@@ -217,10 +218,10 @@ div.profile-info {
   padding-left: 1.5em;
 } 
 
-
-#profile-name {
-  text-align: center;
+.description-container, .market-data-container, .platform-story-container, .case-study-container, .faqs-container, .misc-resources-container{
+  max-width: 900px;
 }
+
 
 .profile-title{
   padding-left: 1.8rem;
