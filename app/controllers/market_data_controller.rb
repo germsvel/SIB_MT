@@ -18,10 +18,4 @@ class MarketDataController < ApplicationController
     end
   end
 
-  private
-
-  def set_profile
-    @profile = Profile.find(params[:profile_id])
-  end
-
 end

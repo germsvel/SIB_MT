@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$orange: #cc4326;
+
+
 /* ===================== */
 /*   General tags        */
 /* ===================== */
@@ -93,11 +96,11 @@ blockquote {
 }
 
 a:link {
-  color:#cc4326;
+  color: $orange;
   text-decoration:none;
 }      /* unvisited link */
 a:visited {
-  color:#cc4326;
+  color:$orange;
   text-decoration:none;
 }  /* visited link */
 a:hover {
@@ -197,8 +200,15 @@ div.navbar-inner a.brand {
 
 
 .main-section {
-  background-color: rgba(25, 25, 25, .85);// #426874;
-  color: #ebe8df; //#545454;
+  background-color: #fff;//#426874; //rgba(25, 25, 25, .85);
+  border-bottom: 1px solid #545454;
+  color: #545454;
+}
+
+.main-section:hover {
+  background-color: rgba(25, 25, 25, .85); //$orange;
+  border-bottom: 1px solid #fff;
+  color: #ebe8df;
 }
 
 h2.main-section {
@@ -216,10 +226,15 @@ h2.main-section {
 
 div.profile-info {
   padding-left: 1.5em;
+  max-width: 100%;
 } 
 
 .description-container, .market-data-container, .platform-story-container, .case-study-container, .faqs-container, .misc-resources-container{
   max-width: 900px;
+}
+
+.description-img, .description-text {
+  float: left;
 }
 
 
