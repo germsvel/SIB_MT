@@ -22,12 +22,17 @@ ActiveRecord::Schema.define(:version => 20130424014413) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "faqs", :force => true do |t|
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-    t.string   "question"
+  create_table "faq_answers", :force => true do |t|
+    t.integer  "faqs_id"
     t.text     "answer"
-    t.integer  "question_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "faqs", :force => true do |t|
+    t.string   "question"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "market_data", :force => true do |t|
