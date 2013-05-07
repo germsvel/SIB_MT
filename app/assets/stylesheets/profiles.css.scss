@@ -9,13 +9,13 @@ $orange: #cc4326;
 /*   General tags        */
 /* ===================== */
 body {
-  padding-top: 80px;
+  padding-top: 0px;
   background: rgba(54, 54, 54, .1);
   //#ebe8df;
   // #7d7d7b;
 
-  @media screen and (max-width: 1200px) { 
-    padding-top: 0;
+  @media screen and (min-width: 986px) { 
+    padding-top: 80px;
   }
 }
 
@@ -45,7 +45,7 @@ ol, ul {
 
 table {
   background-color: #ebe8df;
-  border-color: #cc4326;
+  border-color: $orange;
 }
 
 
@@ -65,19 +65,19 @@ h4 {
 
 
 button {
-  background-color: #cc4326;
+  background-color: $orange;
 }
 
 textarea {
-  width: 700px;
+  width: 364px;
   
-  @media screen and (max-width: 730px) { 
-   max-width: 600px;   
-  }
+  // @media screen and (min-width: 916px) { 
+  //  width: 500px;   
+  // }
 
-  @media screen and (max-width: 630px) { 
-   max-width: 350px;   
-  }  
+  // @media screen and (max-width: 630px) { 
+  //  max-width: 300px;   
+  // }  
 }
 
 blockquote {
@@ -93,6 +93,11 @@ blockquote {
     line-height: 1.7rem;
     padding-bottom: 1rem;
   }
+}
+
+pre {
+  font-size: .7rem;
+  padding: 10px 0 0 0;
 }
 
 a:link {
@@ -142,6 +147,9 @@ a:active {
   min-width: 295px;
 }
 
+#markdown-notice{
+  font-size: .75rem;
+}
 
 #units-container{
   h2 {
@@ -198,7 +206,6 @@ div.navbar-inner a.brand {
   margin-left: -4%;
 }
 
-
 .main-section {
   background-color: #fff;//#426874; //rgba(25, 25, 25, .85);
   border-bottom: 1px solid #545454;
@@ -233,6 +240,10 @@ div.profile-info {
   max-width: 900px;
 }
 
+.markdown-guide-container {
+  border: solid 1px black;
+}
+
 .description-img, .description-text {
   float: left;
 }
@@ -250,23 +261,27 @@ div.profile-info {
   margin-right: 10%;
 }
 
-
+    
 .modal-header h3 {
   text-align: center;
 }
 
 .modal-body {
-  max-height: 800px;
   p {
-    text-align: center;
+    text-align: left;
   }
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 
+  #case-study-modal, #unit-image-modal {
+
+      max-height: 800px;
+
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+}
 
 .case-study-img {
   height:auto; 

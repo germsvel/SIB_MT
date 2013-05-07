@@ -1,0 +1,74 @@
+
+<div id="markdown-guide-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelleby="markdown-guide-modalLabel" aria-hidden="true">
+  <!-- <div class="markdown-guide-container"> -->
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <h3>Markdown syntax</h3>
+    </div> <!-- end modal header -->
+    
+    <div class="modal-body"> 
+      <p>Markdown is a markup language. Following these rules will allow you to write your documents semantically. For a more detailed guide please go to <%= link_to "Wikipedia's Markdown article", "http://en.wikipedia.org/wiki/Markdown", :target => "_blank" %>.</p>
+
+      <section>
+        <h4 class="markdown-guide-header">Headers</h4>
+          <p>Headers are marked by a <code>#</code> symbol.</p>
+          <pre>
+            # This will output a first-level header  
+            #### This will output a fourth-level header
+          </pre>
+      </section>
+      <!-- end markdown headers -->
+
+      <section>
+        <h4 class="markdown-guide-header">Paragraphs</h4>
+          <p>Paragraphs are simply lines of text.</p>
+          <pre>
+            This will output a paragraph with one sentence. 
+          </pre>
+      </section>
+      <!-- end markdown paragraphs -->
+
+      <section>
+        <h4 class="markdown-guide-header">Lists</h4>
+          <p>Lists are marked by <code>*</code>, <code>+</code>, or <code>-</code> for unordered list, and <code>1.</code>,<code>2.</code><code>3.</code>, etc. for ordered lists</p>
+          <pre>
+              * This will output a list item.
+                  * This will be a subitem (indent with 4 spaces)
+              * This will be the second list item 
+              1. This will output a numbered list item 
+              2. This will be the second numbered list item
+          </pre>
+        </section>
+      <!-- end markdown lists -->
+
+      
+      <section>
+        <h4 class="markdown-guide-header">Emphasized text</h4>
+          <p>Emphasis is added by <code>*text*</code> for italics and <code>**text**</code> for bold font</p>
+      </section>
+
+      <!-- end markdown Emphasized text -->
+
+
+      <section>
+        <h4 class="markdown-guide-header">Blockquotes</h4>
+          <p>Block quotes are marked by a <code> > </code> symbol</p>
+          <pre>
+            > This will output a block quote. Include one per paragraph. 
+          </pre>
+      </section>
+      <!-- end markdown blockquotes -->
+
+      <section>
+        <h4 class="markdown-guide-header">External links</h4>
+         <p>Links are marked as <code>[link text](link.address.here)</code>. For example:</p>
+         <pre>
+           [Visit Moontoast.com](http://www.moontoast.com)
+         </pre>
+      </section>
+      <!-- end markdown external links -->
+
+    </div><!-- end modal body -->
+  
+  <!-- </div>end markdown guide container -->
+</div><!-- end modal -->
