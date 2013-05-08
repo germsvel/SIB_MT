@@ -6,7 +6,9 @@
       <li class="question"><%= faq.question %> </li>
     </a> 
       <ul id="answer-<%= faq.id %>" class="collapse">
-        <li class="answer"><%= faq.answer %>| <%= link_to "Delete", faq_path(faq.id), :method=>:delete, :class=>:destroy,:confirm=>"Are you sure?"%></li> 
+        <% faq.faq_answers.each do |faq_answer| %>
+        <li class="answer"><%= faq_answer.answer %>| <%= link_to "Delete", faq_path(faq.id), :method=>:delete, :class=>:destroy,:confirm=>"Are you sure?"%></li> 
+        <% end %>
       </ul>
   <% end %>
   </ol>

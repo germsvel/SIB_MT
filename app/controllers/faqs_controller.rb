@@ -1,11 +1,12 @@
 class FaqsController < ApplicationController
 
-  def index
-    @faqs = Faq.all
-  end
+  # def index
+  #   @faqs = Faq.all
+  # end
 
   def new
     @faq = Faq.new
+    @faq_answer = Faq.faq_answer.build
   end
 
   def create
