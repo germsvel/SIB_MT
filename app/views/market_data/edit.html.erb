@@ -16,6 +16,7 @@
         </tr>
         <tr>
           <%= f.label :description %>
+          <%= render 'shared/markdown_notice' %>
           <%= f.text_area :description %>
         </tr>
 
@@ -26,7 +27,7 @@
       </div>
       <% end %>
 
-    </div>
+  </div>
 
-
+  <%= render "shared/markdown_guide" %>
 </div>
