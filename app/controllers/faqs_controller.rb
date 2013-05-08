@@ -6,7 +6,7 @@ class FaqsController < ApplicationController
 
   def new
     @faq = Faq.new
-    @faq_answer = Faq.faq_answer.build
+    # @faq_answers = Faq.faq_answers.build
   end
 
   def create

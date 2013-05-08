@@ -2,7 +2,7 @@
 <ul>
 <% @faqs.each do |faq| %>
   <li><%= faq.question %></li>
-  <li><%= faq.answer %></li>
+  <li><%= faq.faq_answers %></li>
 <% end %>
 </ul>
 <p><%= link_to "Add question", new_faq_path, :class => 'btn' %></p>

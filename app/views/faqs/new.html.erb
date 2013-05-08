@@ -4,22 +4,25 @@
 
   <div id="faqs-form">
 
-      <%= form_for @faq do |f| %>
+    <%= form_for @faq do |faq_form| %>
       <table class="new-faq-form">
 
         <tr>
-          <%= f.label :question %>
-          <%= f.text_field :question %>
-        </tr>
-        <tr>
-          <%= f.label :answer %>
-          <%= f.text_field :answer %>
+          <%= faq_form.label :question %>
+          <%= faq_form.text_field :question %>
         </tr>
 
+        <%= faq_form.fields_for :faq_answers do |faq_answers_form| %>
+        <tr>
+          <%= faq_answers_form.label :answer %>
+          <%= faq_answers_form.text_field :answer %>
+        </tr>
+        
+        <% end %>
       </table>    
       </br>
       <div class='submit-btn'>
-          <%= f.submit "Submit questions", :class => 'btn' %>
+          <%= faq_form.submit "Submit questions", :class => 'btn' %>
       </div>
       <% end %>
 
