@@ -2,7 +2,7 @@
   <ul>
   <% @misc_resources.each do |misc| %>
     
-      <li><%= link_to 'Go to', "http://#{misc.link_url}", :target=> "_blank" %> <%= misc.description %> | <%= link_to 'Delete', misc_resource_path(misc), :method => :delete, :confirm => 'Are you sure?' %></li>
+      <li><%= link_to 'Go to', "http://#{misc.link_url}", :target=> "_blank" %> <%= misc.description %> <%= link_to delete_btn, misc_resource_path(misc), :method => :delete, :confirm => 'Are you sure?' %></li>
 
   <% end %>
   </ul>

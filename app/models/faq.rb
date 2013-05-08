@@ -5,6 +5,7 @@ class Faq < ActiveRecord::Base
 
   has_many :faq_answers, :inverse_of => :faq
 
-  accepts_nested_attributes_for :faq_answers, :allow_destroy => true
+  accepts_nested_attributes_for :faq_answers, :allow_destroy => true,
+    :reject_if => proc { |answers| answers.all? { |k, v| v.blank? } }
 
 end

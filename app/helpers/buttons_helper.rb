@@ -12,4 +12,8 @@ module ButtonsHelper
     return "<i class='icon-backward'>#{text}</i>".html_safe
   end
 
+  def delete_btn(text="")
+    return "<i class='icon-remove'>#{text}</i>".html_safe
+  end
+
 end

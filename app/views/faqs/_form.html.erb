@@ -1,0 +1,25 @@
+  <div id="faqs-form">
+  <% @faq.faq_answers.build %>
+    <%= form_for @faq do |faq_form| %>
+      <table class="new-faq-form">
+
+        <tr>
+          <%= faq_form.label :question %>
+          <%= faq_form.text_field :question %>
+        </tr>
+
+        <%= faq_form.fields_for :faq_answers do |faq_answers_form| %>
+        <tr>
+          <%= faq_answers_form.label :answer %>
+          <%= faq_answers_form.text_field :answer %>
+        </tr>
+        <% end %>
+
+      </table>    
+      </br>
+      <div class='submit-btn'>
+          <%= faq_form.submit "Submit", :class => 'btn' %>
+      </div>
+    <% end %>
+   
+  </div><!-- end faqs form -->

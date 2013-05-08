@@ -14,8 +14,8 @@ SIBMt::Application.routes.draw do
     resources :case_studies,      :only => [:new, :create, :edit, :update]
   end
 
-  resources :faqs,              :only => [:new, :create, :destroy]
-  resources :faq_answers,       :only => [:new, :create, :destroy]
+  resources :faqs,              :only => [:new, :create, :edit, :update, :destroy]
+  resources :faq_answers,       :only => [:destroy]
   
   
   resources :units,             :only => [:index, :show, :new, :create, :destroy]

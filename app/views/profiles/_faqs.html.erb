@@ -3,11 +3,11 @@
   <ol>
   <% @faqs.each do |faq| %>
     <a data-toggle="collapse" data-parent="#profile-name" href="#answer-<%= faq.id %>">
-      <li class="question"><%= faq.question %> </li>
+      <li class="question"><%= faq.question %> <%= link_to edit_btn, edit_faq_path(faq.id) %></li>
     </a> 
       <ul id="answer-<%= faq.id %>" class="collapse">
         <% faq.faq_answers.each do |faq_answer| %>
-        <li class="answer"><%= faq_answer.answer %>| <%= link_to "Delete", faq_path(faq.id), :method=>:delete, :class=>:destroy,:confirm=>"Are you sure?"%></li> 
+        <li class="answer"><%= faq_answer.answer %> <%= link_to delete_btn, faq_answer_path(faq_answer.id), :method=>:delete, :class=>:destroy,:confirm=>"Are you sure?"%></li> 
         <% end %>
       </ul>
   <% end %>

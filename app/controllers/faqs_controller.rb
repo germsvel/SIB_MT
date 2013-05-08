@@ -6,7 +6,6 @@ class FaqsController < ApplicationController
 
   def new
     @faq = Faq.new
-    # @faq_answers = Faq.faq_answers.build
   end
 
   def create
@@ -17,6 +16,21 @@ class FaqsController < ApplicationController
       redirect_to root_path
     else
       render 'new'
+    end
+  end
+
+  def edit
+    @faq = Faq.find(params[:id])
+  end
+
+  def update
+    @faq = Faq.find(params[:id])
+
+    if @faq.update_attributes(params[:faq])
+      flash[:notice] = "Thank you for updating our knowledge database"
+      redirect_to root_path
+    else
+      render 'edit'
     end
   end
 
