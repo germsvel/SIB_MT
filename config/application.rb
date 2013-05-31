@@ -60,6 +60,6 @@ module SIBMt
     config.assets.version = '1.0'
 
     # Heroku precompiling option
-    config.assets.initialize_on_precompile=false
+    # config.assets.initialize_on_precompile=false
   end
 end
